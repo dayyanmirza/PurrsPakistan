@@ -49,23 +49,23 @@ html, body {
 }
 
 .home {
-  height: 100vh; /* Full viewport height */
-  width: 50vw; /* Full viewport width */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 10px; /* Avoid overlap with fixed navbar */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px; /* Avoid overlap with fixed navbar */
+  box-sizing: content-box; /* Include padding and border in the element's total width and height */
 }
 
 .start {
-  width: 100%; /* Ensure it covers the full width */
+  width: 90%; /* Make the container width responsive */
   max-width: 1200px; /* Optionally set a maximum width */
   background: rgba(255, 255, 255, 0.8); /* Light background for the content */
   padding: 30px;
   border-radius: 40px;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  box-sizing: content-box; /* Include padding and border in the element's total width and height */
 }
 
 .start h1 {
@@ -94,4 +94,101 @@ html, body {
 
 button:hover {
   background-color: #777; /* Slightly lighter on hover */
+}
+
+
+
+/* Cats */
+
+.cats h1 {
+  font-size: 4em; /* Make the h1 element larger */
+  text-align: center;
+}
+
+.cat-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 300px; /* Adjust based on your needs */
+  height: 300px; /* Adjust based on your needs */
+  margin: 0 auto; /* Center the container */
+}
+
+.cat-image {
+  width: 140px; /* Adjust size as needed */
+  height: 140px; /* Adjust size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.cat-image:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cat-image:nth-child(2) {
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.cat-image:nth-child(3) {
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cat-image:nth-child(4) {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.cats p {
+  margin-top: 60px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* About Us */
+.about-content {
+  min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: content-box; /* Include padding and border in the element's total width and height */ 
+}
+
+.about {
+  background-color: rgba(126, 126, 126, 0.24);
+  margin-top: 100px;
+  border-radius: 40px;  
+  width: 90%; /* Make the container width responsive */
+  max-width: 1200px; /* Optionally set a maximum width */
+  padding: 30px;
+  box-sizing: content-box; /* Include padding and border in the element's total width and height */
+}
+
+.about h1 {
+ 
+  font-size: 4em; /* Make the h1 element larger */
+  text-align: center;
+}
+
+.about p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.about img {
+  width: 180px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 40px; /* Optional: add rounded corners to the logo */
+  margin-top: 20px; /* Add some margin to separate it from the text */
 }
